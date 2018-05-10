@@ -108,16 +108,68 @@
 ####  json结构
 
 ```json
-    {
-       "errno": 0,
-       "errmsg":"请求成功",
-       "data": {
-                "gift": [
-                     [],  //每一gift的信息
-                     []
-                ]
-       }
-   }
+{
+    "errno": 0,
+    "errmsg": "请求成功",
+    "data": [
+        {
+            "id": "5",
+            "uid": "42700001",
+            "gift_id": "5",
+            "gift_valid_value": "5",
+            "act_id": "3",
+            "entrance_id": "2",
+            "get_date": "2018-05-07",
+            "get_time": "2018-05-07 10:05:37",
+            "signboard": "5819f3ad1c0ce",
+            "status": "1",
+            "partner": "必胜客",
+            "names": "必胜客必胜客",
+            "desc": "必胜客必胜客必胜客必胜客",
+            "background_url": "720884288973fd14a50b6a1f10ac0f4d2ce39a35.jpg",
+            "thumbnail": "0",
+            "to_use_value": "5",
+            "to_use_value_max": "2",
+            "to_use_value_min": "-1",
+            "to_use_type": "0",
+            "back_type": "0",
+            "use_condition": "{\"18\":{\"id\":\"18\",\"start_time\":\"2018-02-08 06:03:02\",\"end_time\":\"2018-09-08 06:03:02\"},\"19\":{\"id\":\"19\",\"start_day\":\"-1\",\"end_num\":\"66\"},\"20\":{\"id\":\"20\"}}",
+            "get_rules": "{\"23\":{\"id\":\"23\",\"prob\":\"12\"}}",
+            "sort": "12",
+            "create_time": "2018-04-26 03:50:31",
+            "distribution_status": "1",
+            "gift_num": "2"
+        },
+        {
+            "id": "6",
+            "uid": "42700001",
+            "gift_id": "6",
+            "gift_valid_value": "5",
+            "act_id": "3",
+            "entrance_id": "2",
+            "get_date": "2018-05-07",
+            "get_time": "2018-05-07 11:01:05",
+            "signboard": "5819f3ad1c0ce",
+            "status": "1",
+            "partner": "测试",
+            "names": "测试",
+            "desc": "测试",
+            "background_url": "a40a9fdec8434fd53b9c5ba11f6b39fb9655ff72.jpg",
+            "thumbnail": "0",
+            "to_use_value": "2",
+            "to_use_value_max": "1",
+            "to_use_value_min": "-1",
+            "to_use_type": "0",
+            "back_type": "0",
+            "use_condition": "0",
+            "get_rules": "0",
+            "sort": "12",
+            "create_time": "2018-04-26 03:56:15",
+            "distribution_status": "1",
+            "gift_num": "1"
+        }
+    ]
+}
 ```
 
 #### 参数说明
