@@ -13,9 +13,9 @@
 
 ```json
     {
-       "result": true,
-       "statusCode": 0,
-       "userData": {
+       "errno": 0,
+       "errmsg":"请求成功",
+       "data": {
                 "act_id": "3",   //活动id
                 "act_home_style": "1",  //活动风格，每一种风格只能确认活动页面的显示风格，并不确认其他信息，比如说是否发短息。
                 "act_home_page": "images/activityImages/templateHome_3.png",  //参与活动的页面背景图片
@@ -48,11 +48,9 @@
 
 ```json
     {
-       "result": true,
-       "statusCode": 0,
-       "userData": {
-                "send_status": true  //活动短信验证码发送状态
-       }
+       "errno": 0,
+       "errmsg":"请求成功",
+       "data": true  //活动短信验证码发送状态
    }
 ```
 
@@ -62,6 +60,26 @@
    |phone|string|是|手机号码|
 ---
 
+#### phone号码验证码是否正确 方法
+`POST /v4/activity/check-sm-code`
+
+####  json结构
+
+```json
+    {
+       "errno": 0,
+       "errmsg":"请求成功",
+       "data": true  //手机号码验证码正确，且在有效期内
+   }
+```
+
+#### 参数说明
+   |参数|类型|必须|说明|
+   |:---|---|---|---|
+   |phone|string|是|手机号码|
+   |sm_code|string|是|验证码|
+---
+
 #### 用户参加活动 方法
 `POST /v4/activity/act-join`
 
@@ -69,11 +87,11 @@
 
 ```json
       {
-           "result": true,
-           "statusCode": 0,
-           "userData": {
-               "join_status": true, //活动参与是否成功的状态
-               "info":"返回信息值" //活动参与后返回的活动需要的正确或错误的信息
+          "errno": 0,
+          "errmsg":"请求成功",
+          "data": {
+              "status": true, //活动参与是否成功的状态
+              "info":"返回信息值" //活动参与后返回的活动需要的正确或错误的信息
            }
       }
 ```
@@ -93,9 +111,9 @@
 
 ```json
     {
-       "result": true,
-       "statusCode": 0,
-       "userData": {
+       "errno": 0,
+       "errmsg":"请求成功",
+       "data": {
                 "gift": [
                      [],  //每一gift的信息
                      []
