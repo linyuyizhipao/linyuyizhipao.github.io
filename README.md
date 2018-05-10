@@ -5,8 +5,6 @@
 
 ### 根据活动id获取活动页面信息
 
-#### 汇总参数 方法
-
 `POST /v4/activity/act-get-info`
 
 ####  json结构
@@ -60,7 +58,7 @@
    |phone|string|是|手机号码|
 ---
 
-#### phone号码验证码是否正确 方法
+### phone号码验证码是否正确 方法
 `POST /v4/activity/check-sm-code`
 
 ####  json结构
