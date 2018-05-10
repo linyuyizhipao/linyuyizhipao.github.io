@@ -3,7 +3,7 @@
 
 ##  H5页面使用
 
-#### 根据活动id获取活动页面信息
+### 根据活动id获取活动页面信息
 
 #### 汇总参数 方法
 
@@ -41,7 +41,7 @@
    |act_id|int|是|活动id|
 ---
 
-#### 活动发送短信验证码 方法
+### 活动发送短信验证码 方法
 `POST /v4/activity/send-message`
 
 ####  json结构
@@ -80,7 +80,7 @@
    |sm_code|string|是|验证码|
 ---
 
-#### 用户参加活动 方法
+### 用户参加活动 方法
 `POST /v4/activity/act-join`
 
 ####  json结构
@@ -104,7 +104,7 @@
 ---
 
 
-#### 获取用户参加活动最近一次的gift集合 方法
+### 获取用户参加活动最近一次的gift集合 方法
 `POST /v4/activity/get-gift-pass-act-id`
 
 ####  json结构
