@@ -103,7 +103,7 @@
 
 
 ### 获取用户参加活动最近一次的gift集合 方法
-`POST /v4/activity/get-gift-pass-act-id`
+`POST /v4/user/get-gift-pass-act-id`
 
 ####  json结构
 
@@ -179,8 +179,69 @@
    |phone|string|是|手机号码|
 ---
 
+### 展示用户gift的方法
+`POST /v4/user/get-gift`
+
+#### gift_type 用于用户的gift返回数据格式定义
+```
+gift_type = 0 //用户红包类型数据返回
+gift_type = 1 //用户卡，券类型数据返回
+```
 
 
+####  gift_type=0 的json结构
+
+```json
+{
+    "errno": 0,
+    "errmsg": "请求成功",
+    "data":"1314"  //用户的红包金额
+}
+```
+
+####  gift_type=1 的json结构
+
+```json
+{
+    "errno": 0,
+    "errmsg": "请求成功",
+    "data": [
+        {
+            "id": "5",
+            "uid": "42700001",
+            "gift_id": "5",
+            "gift_valid_value": "5",
+            "act_id": "3",
+            "entrance_id": "2",
+            "get_date": "2018-05-07",
+            "get_time": "2018-05-07 10:05:37",
+            "signboard": "5819f3ad1c0ce",
+            "status": "1",
+            "partner": "必胜客",
+            "names": "必胜客必胜客",
+            "desc": "必胜客必胜客必胜客必胜客",
+            "background_url": "720884288973fd14a50b6a1f10ac0f4d2ce39a35.jpg",
+            "thumbnail": "0",
+            "to_use_value": "5",
+            "to_use_value_max": "2",
+            "to_use_value_min": "-1",
+            "to_use_type": "0",
+            "back_type": "0",
+            "use_condition": "{\"18\":{\"id\":\"18\",\"start_time\":\"2018-02-08 06:03:02\",\"end_time\":\"2018-09-08 06:03:02\"},\"19\":{\"id\":\"19\",\"start_day\":\"-1\",\"end_num\":\"66\"},\"20\":{\"id\":\"20\"}}",
+            "get_rules": "{\"23\":{\"id\":\"23\",\"prob\":\"12\"}}",
+            "sort": "12",
+            "create_time": "2018-04-26 03:50:31",
+            "distribution_status": "1",
+            "gift_num": "2"
+        }
+    ]
+}
+```
 
 
-
+#### 参数说明
+   |参数|类型|必须|说明|
+   |:---|---|---|---|
+   |uid|int|是|用户uid|
+   |gift_type|int|是|gift类型的集合|
+---
