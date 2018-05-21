@@ -3,7 +3,7 @@
 
 ##  house对象
 
-### 根据房东uid展示房源下的所有房子信息
+### 根据房东uid展示房东所有房源信息（只展示房源，并不涉及该房源下的房子详情，除非房子统计信息）
 
 `GET http://www.hushuang.site:8080/backend/landlord/show-house-resouce`
 
