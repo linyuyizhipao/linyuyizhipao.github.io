@@ -39,7 +39,7 @@
    |uid|string|是|房东id|
 
 
-### 根据房东uid展示房源列表
+### 根据房源id展示房源列表
 
 `GET http://www.hushuang.site:8080/backend/landlord/house-resouce-list`
 
