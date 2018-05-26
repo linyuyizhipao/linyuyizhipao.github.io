@@ -88,7 +88,7 @@
 
 ### 房东创建自己的房源
 #### 在创建房源的时候有两种类型，1.整栋房源，2.分散房源.创建所需要的参数暂表示为json格式，（方便理解）可理解成实际开发过程中的post表单提交，表单中数据按json字符串中的层级分布就行了
-`GET http://www.hushuang.site:8080/backend/landlord/create-house-resouce`
+`POST http://www.hushuang.site:8080/backend/landlord/create-house-resouce`
 
 ####  传参json结构
 
