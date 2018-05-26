@@ -141,7 +141,7 @@
                  "house_space": 125, //空间大小，单位平方米
                  "floor_num": "6,5", //'具体楼层 例如   6,3  表示总共6层在第三层',
                  "area": "很偏的地方",// '区域分组',
-                 "img_ids": "",//你只需要将套房图片的input的name属性的值取为: house_info[img_ids][]
+                 "img_ids": "",//你只需要将套房图片的input的name属性的值取为: house_info[room_infos][img_dis][] . 当然若无，则此值可为空
                  "remark": "不错的地方啊", //备注
                  "disperse_type": 1, //'分散房源的类型分类。0：整租类型，1：合租类型',
                  "rent": "3", //整租租金，默认未0，表示不存在
@@ -183,7 +183,7 @@
                      "house_fasility": [1,2,5],//单间房子的设备，此设备集合应总是套房的子集
                      "room_space": "12", //房子空间
                      "rent": "888", //租金
-                     "img_ids": ""//你只需要将套房图片的input的name属性的值取为: house_info[room_info][img_dis][] . 当然若无，则此值可为空
+                     "img_ids": ""//你只需要将套房图片的input的name属性的值取为: house_info[room_infos][img_dis][] . 当然若无，则此值可为空
                    }                
                  ]
       }    
