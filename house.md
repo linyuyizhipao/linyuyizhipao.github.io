@@ -90,13 +90,11 @@
 #### 在创建房源的时候有两种类型，1.整栋房源，2.分散房源
 `GET http://www.hushuang.site:8080/backend/landlord/create-house-resouce`
 
-####  json结构
+####  传参json结构
+
 
 ```json
 {
-  "errno": 0,
-  "errmsg": "ok",
-  "data": {
       "uid": "111222", //房东uid
       "names": "保利时代", //房源名称
       "address": "北京首都", //房源地址
@@ -188,9 +186,21 @@
                    }                
                  ]
       }    
-    }
+}
+
+```
+
+
+####  返回值json结构
+
+```json
+{
+  "errno": 0,
+  "errmsg": "ok",
+  "data": true //创建成功
 }
 ```
+
 
 #### 参数说明
    |参数|类型|必须|说明|
