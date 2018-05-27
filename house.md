@@ -213,7 +213,7 @@
 `GET http://www.hushuang.site:8080/backend/landlord/fasility-info`
 
 ####  json结构
-```分散型房源的返回示例``` 
+
 ```json
 {
   "errno": 0,      //访问接口成功的标志，api进入业务流程标志
