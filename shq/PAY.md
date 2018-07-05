@@ -8,14 +8,14 @@
   `POST /players/uid_pay_data`
    
    ####  json结构
-   ####（微信支付返回）
+   ######  （微信支付返回）
 ```json
 {
 "status": "1",
 "data": "https://statecheck.swiftpass.cn/pay/wappay?token_id=28035c4e421a571ed7e18e0cb4f27de84&service=pay.weixin.wappayv2"
 }
 ```
-   ####（支付宝支付返回）
+   ###### （支付宝支付返回）
 
 ```json
 {
@@ -25,7 +25,7 @@
     }
 }
 ```
-   ####（余额支付返回）
+   ###### （余额支付返回）
 ```json
 {
     "status": "1",
