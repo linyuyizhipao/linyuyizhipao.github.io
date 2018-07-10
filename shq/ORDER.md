@@ -89,7 +89,9 @@
    ```json
 {
     "status": 1,
-       "data": {
+    "msg": "ok",
+    "data":
+     {
            "actual_amount": 1.1, // 实际付款金额
            "amount": 1.1, // 订单总金额
            "begin_time": "2017-10-24 17:15:52", // 订单租赁开始时间
@@ -576,6 +578,26 @@
    | orderNo| string | 是| 订单号 |
 
 
+   ### 玩家维权上传图片到oss
+   
+  `POST /players/uploadify_to_oss`
+   
+   ####  json结构
+```json
+{
+    "status": 1,
+    "msg": "success",
+    "data": {
+        "uploaded": 1,
+        "fileName": "shq/201807/10183503915.jpg",
+        "url": "img-channel.xubei.com/shq/201807/10183503915.jpg"
+    }
+}
+   ```
+   ####  参数说明
+   |参数|类型|必须|说明|
+   |:---|---|---|---|
+   | file| file | 是| 图片 |
 
 
 

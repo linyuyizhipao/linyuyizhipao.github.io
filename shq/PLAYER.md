@@ -71,7 +71,7 @@
    |:---|---|---|---|
 
 ### 忘记密码
-
+   
 `POST /players/forget_pwd`
 
 ####  json结构
