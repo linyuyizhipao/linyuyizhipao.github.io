@@ -10,8 +10,17 @@
 ####  json结构
 ```json
 {
-    "status": "1",
-    "data": true
+    "status": 1,
+    "msg": "登陆成功",
+    "data": {
+        "userId": "2e22d449-95ca-4533-a3c1-940e04a544ef"
+    }
+}
+
+{
+    "status": 0,
+    "msg": "登陆失败,密码错误",
+    "data": []
 }
 ```
 #### 参数说明
@@ -28,7 +37,14 @@
 ```json
 {
     "status": "1",
-    "data": true
+    "msg" : "注册成功",
+    "data": [{"url":"http://www."}]
+}
+
+{
+    "status": 0,
+    "msg": "图形验证码错误",
+    "data": []
 }
 ```
 #### 参数说明
@@ -46,7 +62,8 @@
 ```json
 {
     "status": 1,
-    "data": "<img src=\"http://localhost/captcha/flat?SLziFnUy\" >"
+    "msg": "success",
+    "data": "<img src=\"http://localhost/captcha/flat?XBtwjNFc\" >"
 }
 ```
 #### 参数说明
@@ -61,8 +78,16 @@
 ```json
 {
     "status": 1,
-    "data": "找回密码成功"
+    "msg": "找回密码成功",
+    "data": [{"url":"http://www."}]
 }
+
+{
+    "status": 0,
+    "msg": "图形验证码错误",
+    "data": []
+}
+
 ```
 #### 参数说明
    |参数|类型|必须|说明|
@@ -76,7 +101,8 @@
 ####  json结构
 ```json
 {
-    "status": 1,
+    "status": 0,
+    "msg": "success",
     "data": "退出成功"
 }
 ```
@@ -87,14 +113,22 @@
 
 ### 获取短信验证码
 
-`POST /players/logout`
+`POST /players/sms_verify_code`
 
 ####  json结构
 ```json
 {
     "status": 1,
-    "data": "短信发送成功"
+    "msg": "短信发送成功",
+    "data": []
 }
+
+{
+    "status": 0,
+    "msg": "参数错误",
+    "data": "验证码错误"
+}
+
 ```
 #### 参数说明
    |参数|类型|必须|说明|
