@@ -72,7 +72,7 @@
 
 ### 忘记密码
 
-`POST /players/forgetpassWord`
+`POST /players/forget_pwd`
 
 ####  json结构
 ```json
