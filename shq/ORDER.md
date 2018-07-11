@@ -289,6 +289,7 @@
    
    
    
+   
    ### 用户续租订单
    
   `POST /players/cancel_order`
@@ -427,6 +428,7 @@
 ```json
 {
     "status": "1",
+    "msg": "ok",
     "data": {
                     "agree": "",
                     "amount": 2,
@@ -585,7 +587,6 @@
    |:---|---|---|---|
    | businessNo| string | 是| 商户号 |
    | orderNo| string | 是| 订单号 |
-
 
    ### 玩家维权上传图片到oss
    
