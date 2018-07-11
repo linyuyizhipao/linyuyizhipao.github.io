@@ -39,7 +39,7 @@
 {
     "status": "1",
     "msg" : "注册成功",
-    "data": [{"url":"http://www."}]
+    "data": {"url":"http://www."}
 }
 
 {
@@ -72,11 +72,31 @@
 {
     "status": 1,
     "msg": "找回密码成功",
-    "data": [
-        {
-            "url":"http://www."
-        }
-    ]
+    "data": [{"url":"http://www."}]
+}
+
+{
+    "status": 0,
+    "msg": "图形验证码错误",
+    "data": []
+}
+
+```
+#### 参数说明
+   |参数|类型|必须|说明|
+   |:---|---|---|---|
+   
+   
+### 记住密码
+
+`POST /players/rememberpwd`
+
+####  json结构
+```json
+{
+    "status": 1,
+    "msg": "ok",
+    "data": {}
 }
 
 {
@@ -99,7 +119,7 @@
 ```json
 {
     "status": 0,
-    "msg": "success",
+    "msg": "ok",
     "data": "退出成功"
 }
 ```

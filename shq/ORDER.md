@@ -10,40 +10,44 @@
 ####  json结构
 ```json
 {
-    "status": "1",
+    "status": 1,
+    "msg": "ok",
     "data": {
+        "pageCount": 1,
+        "pageXXX": 1,
+        "pageIndex": 1,
+        "pageSize": 2,
         "list": [
             {
-                "actual_amount": 1.1, // 实际付款金额
-                "amount": 1.1, // 订单总金额
-                "begin_time": "2017-10-24 17:15:52", // 订单租赁开始时间
-                "end_time": "2017-10-25 03:25:52", // 订单完成时间
-                "foregift_amount": 0, // 订单押金
-                "game_all_name": "英雄联盟-网通-德玛西亚", // 游戏区服
-                "goods_game": null, // 游戏名称
-                "goods_id": 305987, // 商品ID
-                "goods_price": 0.1, // 商品价格
-                "goods_title": "德玛西亚未来战士冠军之刃", // 商品标题
-                "id": 1933198, // 订单详情ID
-                "image_path": "http://xubei-files.oss-cn-hangzhou.aliyuncs.com/goodsImg/c08bc87e12f24a7b8bbd1656fb0f0603.png", // 订单首页展示图片
-                "mobile": "15865133634", // 卖家手机号
-                "order_id": 2242678, // 订单ID
-                "order_item_price": 1.1, // 订单详情总价格
-                "order_no": "0883655215611151D", // 订单号
-                "order_status": 0, // 订单状态，0为未支付，1为支付中，2为支付成功，3为支付失败，4维权中，5位退款成功，6位退款失败,7取消订单 ，8自产自销，100 交易完成
-                "qq_number": null, // 卖家QQ
-                "remark": "重复租赁", // 订单取消原因
-                "rent_people": "vmp25d", // 转租人
-                "search_title": "德玛西亚未来战士冠军之刃", // 商品描述
-                "status_name": "未支付", // 订单状态描述
-                "user_name": "15865133634", // 用户名
-                "role_name": "角色名" // 角色名
+                "order_no": "12q1oluw22nrl",
+                "booster_status": -1,
+                "right_reason": "",
+                "big_game_name": "英雄联盟-电信-裁决之地",
+                "order_status": 7,
+                "order_status_text": "取消订单",
+                "is_arb": "0",
+                "arb_create_time": "",
+                "right_source": -1,
+                "booster_amount": 0,
+                "id": 245,
+                "arb_status": "",
+                "amount": 2,
+                "search_title": "角色等级 30   英雄数量 139   皮肤数量655   不屈白银Ⅱ   白银框",
+                "right_reason_text": "",
+                "game_all_name": "英雄联盟-电信-裁决之地",
+                "create_time": "2018-07-04 15:25:28",
+                "business_no": "xubei",
+                "end_time": "2018-07-04 16:35:28",
+                "goods_id": 1211221,
+                "game_account": "58644405",
+                "begin_time": "2018-07-04 15:25:28",
+                "foregift_amount": 0,
+                "role_name": "浮生",
+                "goods_title": "角色等级 30   英雄数量 139   皮肤数量655   不屈白银Ⅱ   白银框",
+                "image_path": "//xu-game.xubei.com/game/ZKJHnSeK4Q.png",
+                "rights_protection": ""
             }
-        ],
-        "pageCount": 12, // 查询总条数
-        "pageNumber": 12, // 查询分页
-        "pageIndex": 1,
-        "pageSize": 10
+        ]
     }
 }
 ```
@@ -139,6 +143,7 @@
    ```json
    {
        "status": "1",
+       "msg": "ok",
        "data": {
            "actual_amount": 2,
            "allnightPrice": 16.8,
@@ -270,6 +275,7 @@
    ```json
    {
        "status": "1",
+       "msg": "ok",
        "data": true //取消成功
    }
    ```
@@ -291,6 +297,7 @@
 ```json
 {
     "status": "1",
+    "msg": "ok",
     "data": {
                     "actual_amount": 1,
                     "allnightPrice": null,
@@ -475,6 +482,7 @@
 ```json
 {
     "status": "1",
+    "msg": "ok",
     "data": {
                     "agree": "",
                     "amount": 2,
@@ -530,6 +538,7 @@
 ```json
 {
     "status": "1",
+    "msg": "ok",
     "data": {
                     "agree": "",
                     "amount": 2,
