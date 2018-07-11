@@ -475,6 +475,11 @@
    |:---|---|---|---|
    | businessNo| string | 是| 商户号 |
    | orderNo| string | 是| 订单号 |
+   | rightReason| string | 是| 维权原因 |
+   | rightsProtection| string | 是| 维权说明 |
+   | urls| string | 是| 多个维权图片地址，是一个数组 |
+   | imgPaths| string | 是| 维权图片地址 |
+   | imgId| string | 是| 图片凭证 |
 
    ### 玩家维权订单的详情
    
@@ -581,6 +586,13 @@
                     "want_refund_amount": 2
                 }
 }
+
+{
+    "status": 0,
+    "msg": "维权已经处理,不可以撤销维权",
+    "data": false
+}
+
    ```
    ####  参数说明
    |参数|类型|必须|说明|
