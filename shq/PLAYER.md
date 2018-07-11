@@ -14,6 +14,7 @@
     "msg": "登陆成功",
     "data": {
         "userId": "2e22d449-95ca-4533-a3c1-940e04a544ef"
+        "url": "http://...."
     }
 }
 
@@ -56,22 +57,14 @@
 
 ### 刷新验证码(非手机短信验证码)
 
-`POST /players/refreshCaptcha`
+`POST /captcha`
 
-####  json结构
-```json
-{
-    "status": 1,
-    "msg": "success",
-    "data": "<img src=\"http://localhost/captcha/flat?XBtwjNFc\" >"
-}
-```
 #### 参数说明
    |参数|类型|必须|说明|
    |:---|---|---|---|
 
 ### 忘记密码
-   
+
 `POST /players/forget_pwd`
 
 ####  json结构
@@ -79,7 +72,11 @@
 {
     "status": 1,
     "msg": "找回密码成功",
-    "data": [{"url":"http://www."}]
+    "data": [
+        {
+            "url":"http://www."
+        }
+    ]
 }
 
 {
