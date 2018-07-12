@@ -163,18 +163,62 @@
 {
     "status": 1,
     "msg": "ok",
-    "data": [
-        {
-            "id": 31,
-            "banner_name_id": 4,
-            "img_url": "img-channel.xubei.com/shq/201807/12132214863.jpg",
-            "location": "点击跳转的http链接",
-            "sort": 3,
-            "desc": "显示影藏的内容",
-            "create_at": "1531372940",
-            "status": 1
-        }
-    ]
+    "data": {
+        "current_page": 1,
+        "data": [
+            {
+                "id": 37,
+                "banner_name_id": 5,
+                "img_url": "img-channel.xubei.com/shq/201807/12182424962.jpg",
+                "location": "23",
+                "sort": 2,
+                "title": "发射点发大水",
+                "desc": "3434563456",
+                "create_at": "1531391067",
+                "status": 1
+            },
+            {
+                "id": 36,
+                "banner_name_id": 5,
+                "img_url": "img-channel.xubei.com/shq/201807/12181535597.jpg",
+                "location": "4234234243",
+                "sort": 3,
+                "title": "0",
+                "desc": "23464565475687856815345634654",
+                "create_at": "1531390545",
+                "status": 1
+            },
+            {
+                "id": 33,
+                "banner_name_id": 5,
+                "img_url": "img-channel.xubei.com/shq/201807/12162719536.jpg",
+                "location": "q234000000000000000",
+                "sort": 234,
+                "title": "0",
+                "desc": "54564",
+                "create_at": "1531384043",
+                "status": 1
+            },
+            {
+                "id": 32,
+                "banner_name_id": 5,
+                "img_url": "img-channel.xubei.com/shq/201807/12163833566.jpg",
+                "location": "q234111",
+                "sort": 2341111,
+                "title": "0",
+                "desc": "54564111",
+                "create_at": "1531384027",
+                "status": 1
+            }
+        ],
+        "first_page_url": "http://localhost/players/show_banner/5?page=1",
+        "from": 1,
+        "next_page_url": null,
+        "path": "http://localhost/players/show_banner/5",
+        "per_page": 15,
+        "prev_page_url": null,
+        "to": 4
+    }
 }
 
 ```
@@ -182,6 +226,7 @@
    |参数|类型|必须|说明|
    |:---|---|---|---|
    | type| string|是|banner类型.1:热门推荐;2.轮播图;3:一元专区;4新游飙升榜;5:热门租单|
+   | page| string|否|分页,不带表示首页|
 
 
 
