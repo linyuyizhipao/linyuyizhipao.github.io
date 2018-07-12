@@ -152,6 +152,36 @@
    |:---|---|---|---|
    | mobile| string|是|手机号码 |
    | captcha| string | 是| 图形验证码 |
+   
+   
+### 获取banner信息
+
+`POST /players/show_banner`
+
+####  json结构
+```json
+{
+    "status": 1,
+    "msg": "ok",
+    "data": [
+        {
+            "id": 31,
+            "banner_name_id": 4,
+            "img_url": "img-channel.xubei.com/shq/201807/12132214863.jpg",
+            "location": "点击跳转的http链接",
+            "sort": 3,
+            "desc": "显示影藏的内容",
+            "create_at": "1531372940",
+            "status": 1
+        }
+    ]
+}
+
+```
+#### 参数说明
+   |参数|类型|必须|说明|
+   |:---|---|---|---|
+   | type| string|是|banner类型.1:热门推荐;2.轮播图;3:一元专区;4新游飙升榜;5:热门租单|
 
 
 
