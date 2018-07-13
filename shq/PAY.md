@@ -3,21 +3,11 @@
 
 ##  支付API集合
 
-   ### 用户订单支付
+   ### 支付宝支付数据
    
-  `POST /players/uid_pay_data`
+  `POST /players/ali_pay`
    
    ####  json结构
-   ####（微信支付返回）
-```json
-{
-"status": "1",
-"msg": "ok",
-"data": "https://statecheck.swiftpass.cn/pay/wappay?token_id=28035c4e421a571ed7e18e0cb4f27de84&service=pay.weixin.wappayv2"
-}
-```
-   ####（支付宝支付返回）
-
 ```json
 {
     "status": "1",
@@ -27,14 +17,8 @@
     }
 }
 ```
-   ####（余额支付返回）
-```json
-{
-    "status": "1",
-    "msg": "ok",
-    "data": true
-}
-```
+
+   
    
    ####  参数说明 (支付宝支付)
    |参数|类型|必须|说明|
@@ -43,20 +27,51 @@
    | orderNo| string | 是| 订单号 |
    | type| string | 是| 支付类型(lease:租赁,topup:充值) |
 
-   ####  参数说明 (微信支付)
+
+
+   ### 微信支付数据
+   
+  `POST /players/wx_pay`
+   
+   ####  json结构
+   
+```json
+{
+"status": "1",
+"msg": "ok",
+"data": "https://statecheck.swiftpass.cn/pay/wappay?token_id=28035c4e421a571ed7e18e0cb4f27de84&service=pay.weixin.wappayv2"
+}
+```
+   
+   
+   ####  参数说明 (支付宝支付)
    |参数|类型|必须|说明|
    |:---|---|---|---|
-   | pay_type| string | 是| 支付类型 |
    | orderNo| string | 是| 订单号 |
    | type| string | 是| 支付类型(lease:租赁,topup:充值) |
 
-   ####  参数说明 (余额支付)
+   ### 应用内支付行为
+   
+  `POST /players/app_pay`
+   
+   ####  json结构
+   
+```json
+{
+    "status": "1",
+    "msg": "ok",
+    "data": true
+}
+```
+   
+   
+   ####  参数说明 
    |参数|类型|必须|说明|
    |:---|---|---|---|
-   | pay_type| string | 是| 支付类型 |
-   | payPwd| string | 是| 支付密码 |
    | orderNo| string | 是| 订单号 |
-   | businessNo| string | 是| 商户号 |
+   | payPwd| string | 是| 支付密码 |
+
+
 
    ### 玩家交易支付列表记录展示
    
@@ -74,8 +89,6 @@
    ####  参数说明 
    |参数|类型|必须|说明|
    |:---|---|---|---|
-   | pageIndex| string | 否| 当前页 |
-   | pageSize| string | 否| 页面大小 |
    | startDate| string | 否| 开始时间 |
    | endDate| string | 否| 截至时间 |
    
@@ -83,7 +96,14 @@
    
    
    
-   ### 找回余额支付密码
+   
+   
+   
+   
+   
+   
+   
+   ### 找回余额支付密码,设置初始密码
    
   `POST /players/foundPayPwd`
    

@@ -54,36 +54,12 @@
 #### 参数说明（登陆码列表）
    |参数|类型|必须|说明|
    |:---|---|---|---|
-   | listType| string|是|用户订单列表类型。0：登陆码的订单列表；1：订单时间段的列表；2：订单状态的订单列表；3：用户所有订单列表 |
-   | businessNo| string | 是| 商户号 |
-   | searchValue| string | 是 | 搜索内容，商品名称/订单编号，就是你订单号搜索的时候用 |
-   | pageIndex| string | 否| 查询页数，默认为1 |
-   | pageSize| string | 否| 查询条数，默认为10 |
-#### 参数说明（时间段列表）
-   |参数|类型|必须|说明|
-   |:---|---|---|---|
-   | listType| string|是|用户订单列表类型。0：登陆码的订单列表；1：订单时间段的列表；2：订单状态的订单列表；3：用户所有订单列表 |
-   | businessNo| string | 是| 商户号 |
+   | orderStatus| string | 否| 	订单状态：0-未支付，2-支付成功，3-支付失败，4-维权中，5-退款成功，6-退款失败,7-取消订单 ，8-自产自销，100-交易完成 |
    | startTime| string | 是| 查询页数，默认为1 |
    | endTime| string | 是| 开始时间在此时间之后的用户订单 |
    | pageIndex| string | 否| 查询页数，默认为1 |
    | pageSize| string | 否| 查询条数，默认为10 |
-#### 参数说明（状态列表）
-   |参数|类型|必须|说明|
-   |:---|---|---|---|
-   | listType| string|是|用户订单列表类型。0：登陆码的订单列表；1：订单时间段的列表；2：订单状态的订单列表；3：用户所有订单列表 |
-   | businessNo| string | 是| 商户号 |
-   | orderStatus| string | 否| 	订单状态：0-未支付，2-支付成功，3-支付失败，4-维权中，5-退款成功，6-退款失败,7-取消订单 ，8-自产自销，100-交易完成 |
-   | pageIndex| string | 否| 查询页数，默认为1 |
-   | pageSize| string | 否| 查询条数，默认为10 |
-
-#### 参数说明（用户所有订单列表）
-   |参数|类型|必须|说明|
-   |:---|---|---|---|
-   | listType| string|是|用户订单列表类型。0：登陆码的订单列表；1：订单时间段的列表；2：订单状态的订单列表；3：用户所有订单列表 |
-   | businessNo| string | 是| 商户号 |
-   | pageIndex| string | 否| 查询页数，默认为1 |
-   | pageSize| string | 否| 查询条数，默认为10 |
+   | searchValue| string | 是 | 搜索内容，商品名称/订单编号，就是你订单号搜索的时候用 |
 
    ### 用户订单详情
    
@@ -132,7 +108,6 @@
    ####  参数说明
    |参数|类型|必须|说明|
    |:---|---|---|---|
-   | businessNo| string | 是| 商户号 |
    | orderNo| string | 是| 订单号 |
 
    ### 用户创建支付前的订单（就是还未进行支付的）
@@ -262,7 +237,6 @@
    ####  参数说明
    |参数|类型|必须|说明|
    |:---|---|---|---|
-   | businessNo| string | 是| 商户号 |
    | goodsId| string | 是| 商品ID |
    | leaseType| string | 是| 租赁类型，1-按小时租，2-按天租，3-按周租，4-通宵畅玩，只有英雄联盟才有后面的2,3,4，其他游戏只有小时,默认为1 |
    | count| string | 是| 商品数量 |
@@ -282,7 +256,6 @@
    ####  参数说明
    |参数|类型|必须|说明|
    |:---|---|---|---|
-   | businessNo| string | 是| 商户号 |
    | orderNo| string | 是| 订单号 |
    | cancelReason| string | 是| 取消原因 |    
    
@@ -290,9 +263,11 @@
    
    
    
+   
+   
    ### 用户续租订单
    
-  `POST /players/cancel_order`
+  `POST /players/relet`
    
    ####  json结构
 ```json
@@ -417,7 +392,7 @@
    ####  参数说明
    |参数|类型|必须|说明|
    |:---|---|---|---|
-   | businessNo| string | 是| 商户号 |
+   | count| string | 是| 商品数量 |
    | orderNo| string | 是| 订单号 |
 
    ### 玩家订单维权
@@ -473,13 +448,12 @@
    ####  参数说明
    |参数|类型|必须|说明|
    |:---|---|---|---|
-   | businessNo| string | 是| 商户号 |
    | orderNo| string | 是| 订单号 |
    | rightReason| string | 是| 维权原因 |
-   | rightsProtection| string | 是| 维权说明 |
-   | urls| string | 是| 多个维权图片地址，是一个数组 |
-   | imgPaths| string | 是| 维权图片地址 |
-   | imgId| string | 是| 图片凭证 |
+   | rightsProtection| string | 否| 维权说明 |
+   | urls| string | 否| 多个维权图片地址，是一个数组 |
+   | imgPaths| string | 否| 维权图片地址 |
+   | imgId| string | 否| 图片凭证 |
 
    ### 玩家维权订单的详情
    
@@ -534,7 +508,6 @@
    ####  参数说明
    |参数|类型|必须|说明|
    |:---|---|---|---|
-   | businessNo| string | 是| 商户号 |
    | orderNo| string | 是| 订单号 |
 
    ### 玩家取消维权订单
@@ -597,7 +570,6 @@
    ####  参数说明
    |参数|类型|必须|说明|
    |:---|---|---|---|
-   | businessNo| string | 是| 商户号 |
    | orderNo| string | 是| 订单号 |
 
    ### 玩家维权上传图片到oss
