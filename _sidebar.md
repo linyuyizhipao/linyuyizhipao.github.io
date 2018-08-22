@@ -1,6 +1,6 @@
 
 
-*  [支付](shq/PAY)
+*  [GO文档指南](the-way-to-go_ZH_CN-master/eBook)
 
 *  [订单](shq/ORDER)
 
